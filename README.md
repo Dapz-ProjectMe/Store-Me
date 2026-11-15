@@ -26,3 +26,10 @@ Open `index.html` through a local static server. The checkout page is `checkout.
 - `js/main.js` — landing-page interactions
 - `js/checkout.js` — WhatsApp checkout flow
 - `docs/` — specification, security, QA, deployment notes
+
+
+## Perbaikan v1.1
+- Navigasi utama sekarang membuka halaman khusus: Home, Services, How it works, About, Contact.
+- Menu mobile tetap dapat dibuka/tutup dan berpindah halaman.
+- Menambahkan pengaman overflow horizontal untuk menghilangkan area kosong putih di sisi kanan pada mobile.
+- Menambahkan halaman Services terpisah dengan detail layanan dan checkout.
