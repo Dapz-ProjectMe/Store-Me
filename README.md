@@ -1,46 +1,28 @@
-# DAPZ TOOLS — CLEAN FINAL
+# DAPZ DIGITAL — Frontend Prototype v1.0
 
-## Struktur
-```text
-DAPZ-TOOLS/
-├── index.html
-├── account.html
-├── admin/
-│   └── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       ├── core/
-│       │   ├── guest-limit.js
-│       │   ├── supabase.js
-│       │   └── tools.js
-│       └── pages/
-│           ├── admin.js
-│           ├── account.js
-│           └── home.js
-├── supabase/
-│   ├── schema.sql
-│   └── guest-limit.md
-└── README.md
-```
+Original service-business website direction informed by the user's DigitalHub and DAPZ TOOLS references. The design is not a copy of either reference.
 
-## Setup
-1. Buat project Supabase.
-2. Jalankan `supabase/schema.sql` di SQL Editor.
-3. Aktifkan Email/Password Auth.
-4. Konfigurasi Google OAuth jika diperlukan.
-5. Isi URL dan Publishable/anon key di `assets/js/core/supabase.js`.
-6. Jangan pernah menaruh `service_role` key di frontend.
-7. Jalankan melalui HTTP server, lalu tes register/login.
-8. Ambil UUID akun admin dari Authentication → Users.
-9. Jalankan `update public.profiles set is_admin=true where id='YOUR-UUID';`.
-10. Buka `/admin/`.
+## Included
+- Responsive landing page with original DAPZ DIGITAL identity.
+- Service cards populated from `js/services.js`.
+- Service detail dialog.
+- Checkout form with selected-service summary and price.
+- Cash / WhatsApp order message flow.
+- Draft specifications, security notes, QA checklist, and deployment checklist.
 
-## Catatan
-Tool cards saat ini adalah UI/fondasi. Limit 3 guest memakai localStorage untuk testing. Untuk production, quota harus dipindahkan ke server/edge karena localStorage dapat di-reset. Tool media membutuhkan backend, rate limit, batas upload, dan kepatuhan terhadap aturan platform/copyright.
+## Important limitations
+This is a frontend prototype, not a production-ready payment system. QRIS is deliberately disabled. The current catalogue and prices are examples and must be approved before publication. The WhatsApp number is a placeholder.
 
+Before accepting real orders, implement a trusted backend, server-side price calculation, secure admin access, privacy/terms pages, and official payment-provider integration. Never place private API keys in frontend JavaScript or trust a screenshot as proof of payment.
 
-## Code style
+## Preview
+Open `index.html` through a local static server. The checkout page is `checkout.html`.
 
-All HTML, CSS, JavaScript, SQL, and Markdown files are intentionally formatted with readable indentation and separated sections so they are easier to edit on a phone or laptop.
+## Main files
+- `index.html` — landing page
+- `checkout.html` — order request form
+- `css/` — styles
+- `js/services.js` — service catalogue and example prices
+- `js/main.js` — landing-page interactions
+- `js/checkout.js` — WhatsApp checkout flow
+- `docs/` — specification, security, QA, deployment notes
