@@ -1,6 +1,6 @@
 // Ganti dengan nomor WhatsApp bisnis setelah nomor final ditentukan.
 // Format: kode negara + nomor, tanpa tanda +, spasi, atau strip. Contoh format Indonesia: 6281234567890
-const BUSINESS_WHATSAPP = "6280000000000";
+const BUSINESS_WHATSAPP = "6281996319627";
 const money = value => new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(value);
 const selectedId = new URLSearchParams(window.location.search).get("service");
 const service = SERVICES.find(item=>item.id===selectedId);
